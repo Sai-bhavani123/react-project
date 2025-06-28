@@ -1,0 +1,121 @@
+/* src/components/Assignments/Assignments.css */
+.assignments-container {
+  width: 100%;
+}
+
+.assignments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.assignments-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #202124;
+}
+
+.create-assignment-btn {
+  background-color: #343a40;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.assignments-content {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid #e9ecef;
+  min-height: 40vh;
+}
+
+.no-assignments-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #6c757d;
+  padding: 3rem 0;
+}
+
+.no-assignments-icon {
+  font-size: 3rem;
+  color: #adb5bd;
+  margin-bottom: 1rem;
+}
+
+.no-assignments-placeholder h3 {
+  font-size: 1.25rem;
+  color: #343a40;
+  margin-bottom: 0.5rem;
+}
+
+/* Styles for the assignment list */
+.assignment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.assignment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.assignment-info h4 {
+  margin: 0 0 0.25rem 0;
+  color: #202124;
+}
+
+.assignment-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #5f6368;
+}
+
+.assignment-actions button {
+  background: none;
+  border: none;
+  color: #c5221f;
+  cursor: pointer;
+  font-size: 1rem;
+}
+/* ADD THESE STYLES TO THE END OF Assignments.css */
+
+/* This makes the action buttons sit next to each other */
+.assignment-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Style for the new Edit button */
+.edit-assignment-btn {
+  background: none;
+  border: none;
+  color: #1054c2; /* Blue color for the edit icon */
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-assignment-btn:hover {
+  background-color: #e8f0fe; /* Light blue background on hover */
+}

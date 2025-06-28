@@ -1,0 +1,637 @@
+/* /* /* /* src/pages/StudentDashboard/StudentDashboard.css
+.student-dashboard-content-area {
+    width: 100%;
+}
+
+.student-dashboard-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #202124;
+    margin-top: 0;
+}
+
+.welcome-message {
+    font-size: 1rem;
+    color: #5f6368;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #e0e0e0;
+}
+
+.stat-icon { font-size: 1.5rem; }
+.stat-icon.blue { color: #4285f4; }
+.stat-icon.green { color: #34a853; }
+.stat-icon.purple { color: #8430ce; }
+.stat-icon.orange { color: #f97d09; }
+
+.stat-info h3 { font-size: 2rem; margin: 0; }
+.stat-info p { margin: 0; color: #5f6368; }
+
+.available-classes-header {
+    margin-bottom: 1.5rem;
+}
+
+.available-classes-header h2 {
+    font-size: 1.8rem; color: #202124; font-weight: 600; margin: 0;
+}
+.available-classes-header p {
+    color: #5f6368; margin: 0.25rem 0 0 0;
+}
+
+.class-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.class-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.class-card-info p { margin: 0; color: #5f6368; }
+.class-card-info p:first-child { font-weight: 500; }
+
+.join-class-btn {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+}
+
+.join-class-btn:disabled {
+    background-color: #e9ecef;
+    color: #adb5bd;
+    cursor: not-allowed;
+} *//* src/pages/StudentDashboard/StudentDashboard.css */
+
+/* .student-dashboard-content-area {
+    width: 100%;
+}
+
+.student-dashboard-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #202124;
+    margin-top: 0;
+}
+
+.welcome-message {
+    font-size: 1rem;
+    color: #5f6368;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #e0e0e0;
+}
+
+.stat-icon { font-size: 1.5rem; }
+.stat-icon.blue { color: #4285f4; }
+.stat-icon.green { color: #34a853; }
+.stat-icon.purple { color: #8430ce; }
+.stat-icon.orange { color: #f97d09; }
+
+.stat-info h3 { font-size: 2rem; margin: 0; }
+.stat-info p { margin: 0; color: #5f6368; }
+
+.classes-section-header, 
+.available-classes-header {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.classes-section-header h2, 
+.available-classes-header h2 {
+    font-size: 1.8rem;
+    color: #202124;
+    font-weight: 600;
+    margin: 0;
+}
+
+.classes-section-header p, 
+.available-classes-header p {
+    color: #5f6368;
+    margin: 0.25rem 0 0 0;
+}
+
+.class-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.available-class-card, .enrolled-class-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.available-class-card:hover, .enrolled-class-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.class-card-info h4,
+.enrolled-class-info h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.class-card-info p,
+.enrolled-class-info p {
+  margin: 0;
+  color: #5f6368;
+  font-size: 0.9rem;
+}
+
+/* Join button for available classes */
+/* .join-class-btn {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-weight: 500;
+}
+
+.open-class-btn {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+    border: 1px solid #d2e3fc;
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}   */ 
+   /* src/pages/StudentDashboard/StudentDashboard.css */
+/* .student-dashboard-content-area {
+    width: 100%;
+    padding: 2rem 3rem;
+}
+
+.classes-section-header, 
+.available-classes-header {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.classes-section-header:first-of-type,
+.available-classes-header:first-of-type {
+    margin-top: 0;
+}
+
+.classes-section-header h2, 
+.available-classes-header h2 {
+    font-size: 1.8rem;
+    color: #202124;
+    font-weight: 600;
+    margin: 0;
+}
+
+.classes-section-header p, 
+.available-classes-header p {
+    color: #5f6368;
+    margin: 0.25rem 0 0 0;
+}
+
+.class-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+
+.my-class-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.my-class-info {
+    flex-grow: 1;
+}
+
+.my-class-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.my-class-header h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.enrolled-text {
+    color: #5f6368;
+    font-size: 0.9rem;
+}
+
+.my-class-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eef2f9;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.my-class-footer p {
+    margin: 0;
+    color: #5f6368;
+}
+
+.enter-btn {
+    background-color: #343a40;
+    color: white;
+    padding: 8px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+
+/* --- STYLES FOR AVAILABLE CLASS CARDS --- */
+/* .available-class-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.available-class-info h4 {
+    margin: 0 0 0.25rem 0;
+}
+
+.available-class-info a {
+    color: #4285f4;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.available-class-info a:hover {
+    text-decoration: underline;
+}
+
+.join-btn {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+} 
+
+
+.meeting-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    color: #4285f4;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.meeting-link:hover {
+    text-decoration: underline;
+} */
+ /* src/pages/StudentDashboard/StudentDashboard.css */
+
+/* .student-dashboard-content-area {
+    width: 100%;
+}
+
+.dashboard-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #202124;
+    margin-top: 0;
+}
+
+.welcome-message {
+    font-size: 1rem;
+    color: #5f6368;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #eef2f9;
+}
+
+.stat-icon { font-size: 1.5rem; }
+.stat-icon.blue { color: #4285f4; }
+.stat-icon.green { color: #34a853; }
+.stat-icon.purple { color: #8430ce; }
+.stat-icon.orange { color: #f97d09; }
+
+.stat-info h3 { font-size: 2rem; margin: 0; }
+.stat-info p { margin: 0; color: #5f6368; }
+
+.section-header {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    font-size: 1.8rem;
+    color: #202124;
+    font-weight: 600;
+    margin: 0;
+}
+
+.section-header p {
+    color: #5f6368;
+    margin: 0.25rem 0 0 0;
+}
+
+.class-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+} */
+
+/* --- STYLES FOR "MY CLASSES" CARDS (ENROLLED) --- */
+/* .my-class-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.my-class-info {
+    flex-grow: 1;
+}
+
+.my-class-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.my-class-header h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: #202124;
+}
+
+.my-class-header svg {
+    font-size: 1.2rem;
+    color: #5f6368;
+    margin-top: 0.25rem;
+}
+
+.enrolled-text {
+    color: #5f6368;
+    font-size: 0.9rem;
+}
+
+.my-class-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eef2f9;
+    padding-top: 1rem;
+    margin-top: 2rem;
+}
+
+.my-class-footer p {
+    margin: 0;
+    color: #5f6368;
+}
+
+.enter-btn {
+    background-color: #343a40;
+    color: white;
+    padding: 8px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+} */
+
+/* --- STYLES FOR "AVAILABLE CLASSES" CARDS --- */
+/* .available-class-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.available-class-info h4 {
+    margin: 0 0 0.25rem 0;
+}
+
+.available-class-info p {
+    margin: 0;
+    color: #5f6368;
+}
+
+.join-btn {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+/* Add this to the end of src/pages/StudentDashboard/StudentDashboard.css */
+
+/* .meeting-link { 
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #4285f4;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 4px 0;
+}
+
+.meeting-link:hover {
+    text-decoration: underline;
+/* }  */
+/* src/pages/StudentDashboard/StudentDashboard.css */
+.student-dashboard-content-area {
+    width: 100%;
+}
+.dashboard-title {
+    font-size: 2.2rem; font-weight: 700; color: #202124; margin-top: 0;
+}
+.welcome-message {
+    font-size: 1rem; color: #5f6368; margin-top: -1rem; margin-bottom: 2rem;
+}
+.stats-container {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem; margin-bottom: 3rem;
+}
+.stat-card {
+    background-color: #ffffff; border-radius: 12px; padding: 1.5rem;
+    display: flex; align-items: center; gap: 1rem; border: 1px solid #eef2f9;
+}
+.stat-icon { font-size: 1.5rem; }
+.stat-icon.blue { color: #4285f4; }
+.stat-icon.green { color: #34a853; }
+.stat-icon.purple { color: #8430ce; }
+.stat-info h3 { font-size: 2rem; margin: 0; }
+.stat-info p { margin: 0; color: #5f6368; }
+.section-header { margin-top: 2rem; margin-bottom: 1rem; }
+.section-header h2 { font-size: 1.8rem; color: #202124; margin-bottom: 0.25rem; }
+.section-header p { color: #5f6368; margin: 0; }
+.class-list-container {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+.my-class-card {
+    background-color: #fff; border: 1px solid #eef2f9; border-radius: 12px;
+    padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between;
+}
+.my-class-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+}
+.my-class-card h4 { font-size: 1.25rem; margin: 0; }
+.my-class-card .enrolled-text { font-size: 0.9rem; color: #34a853; margin-top: 0.25rem; }
+.my-class-footer {
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid #eef2f9; padding-top: 1rem; margin-top: 2rem;
+}
+.my-class-footer p { margin: 0; color: #5f6368; }
+.enter-btn {
+    background-color: #4285f4; color: white; border: none; padding: 8px 24px;
+    border-radius: 8px; cursor: pointer;
+}
+.available-class-card {
+    background-color: #fff; border: 1px solid #eef2f9; border-radius: 12px;
+    padding: 1.5rem; display: flex; justify-content: space-between; align-items: center;
+}
+.join-btn {
+    background-color: #e8f0fe; color: #1a73e8; border: none; padding: 8px 24px;
+    border-radius: 8px; cursor: pointer; font-weight: 500;
+}
+/* ADD THESE STYLES TO THE END OF StudentDashboard.css */
+
+/* This new container will hold both the Enter and Leave buttons */
+.my-class-buttons {
+    display: flex;
+    gap: 0.5rem; /* Adds a small space between the buttons */
+}
+
+/* Style for the new "Leave" button */
+.leave-btn {
+    background-color: #fce8e6; /* A light, warning red background */
+    border: 1px solid #caafac; /* A soft red border */
+    color: #b91c1c; /* A strong red text color */
+    font-weight: 500;
+    padding: 6px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.leave-btn:hover {
+    background-color: #f8d7da; /* A slightly darker red on hover */
+    border-color: #f5c6cb;
+}
+
+/* Optional: Adjust the footer text if needed */
+.my-class-footer p {
+    font-size: 0.85rem;
+    color: #5f6368;
+}
+/* ADD THESE STYLES TO THE END OF StudentDashboard.css */
+
+.meeting-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 8px 12px;
+    background-color: #e7f3ff; /* A light blue background */
+    color: #005fc9; /* A strong blue color for the text */
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.meeting-link:hover {
+    background-color: #dbeaff; /* A slightly darker blue on hover */
+    color: #004da3;
+}

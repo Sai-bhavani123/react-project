@@ -1,0 +1,125 @@
+/* src/pages/AuthPage/AuthPage.css */
+.auth-page-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f8f9fe;
+  }
+  
+  .auth-layout {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 85vh; /* Adjusted height for better fit */
+  }
+  
+  /* Left Info Panel */
+  .info-panel {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  
+  .logo-icon {
+    font-size: 2.5rem;
+    color: #4a89f3;
+    margin-right: 1rem;
+  }
+  
+  .logo-text h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #343a40;
+  }
+  
+  .logo-text p {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  .info-panel .headline {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .info-panel .headline span {
+    color: #4a89f3;
+  }
+  
+  .info-panel .description {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 2.5rem;
+    max-width: 450px;
+  }
+  
+  .feature-list {
+    list-style: none;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #495057;
+  }
+  
+  .feature-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .feature-icon.green {
+    background-color: #e6f9f1;
+    color: #28a745;
+  }
+  
+  .feature-icon.blue {
+    background-color: #e7f3ff;
+    color: #007bff;
+  }
+  
+  .feature-icon.purple {
+    background-color: #f3e9ff;
+    color: #6f42c1;
+  }
+  
+  /* Right Form Panel */
+  .form-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style for the clickable links to switch forms */
+  .signup-link a, .login-link a {
+      color: #4a89f3;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+  }
+  
+  .signup-link a:hover, .login-link a:hover {
+      text-decoration: underline;
+  }

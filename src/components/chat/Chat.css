@@ -1,0 +1,123 @@
+/* ADD THIS TO THE END OF THE FILE
+
+.chat-header-link {
+    text-decoration: none;
+    color: inherit; 
+} */
+
+/* src/components/Chat/Chat.css */
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 70vh; /* A bit more height */
+}
+
+.chat-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #202124;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eef2f9;
+}
+
+.messages-area {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Base style for a message bubble */
+.message {
+    max-width: 70%;
+    padding: 0.75rem 1rem;
+    border-radius: 18px; /* More rounded bubbles */
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+/* Style for messages sent by the current user */
+.message.sent {
+    align-self: flex-end;
+    background-color: #1a73e8; /* A darker, more standard blue */
+    color: white;
+    border-bottom-right-radius: 4px; /* Creates the "tail" */
+}
+
+/* Style for messages received from others */
+.message.received {
+    align-self: flex-start;
+    background-color: #f1f3f5;
+    color: #202124;
+    border-bottom-left-radius: 4px;
+}
+
+.sender {
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+}
+
+.text {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.timestamp {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    text-align: right;
+    opacity: 0.8;
+}
+
+/* The form at the bottom for typing a message */
+.message-input-form {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid #e0e0e0;
+    gap: 0.75rem;
+}
+
+.message-input-form input {
+    flex-grow: 1;
+    border: 1px solid #dadce0;
+    border-radius: 8px; /* Square with rounded corners */
+    padding: 12px 18px;
+    font-size: 1rem;
+}
+
+.message-input-form input:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+.message-input-form button {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px; /* Square with rounded corners */
+    border: none;
+    background-color: #5f6368;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.2s;
+}
+
+.message-input-form button:hover {
+    background-color: #3c4043;
+}
+
+.message-input-form button:disabled {
+    background-color: #dadce0;
+    cursor: not-allowed;
+}

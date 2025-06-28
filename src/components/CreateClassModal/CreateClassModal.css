@@ -1,0 +1,245 @@
+/* src/components/CreateClassModal/CreateClassModal.css
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .modal-form input,
+  .modal-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .modal-form input:focus,
+  .modal-form textarea:focus {
+    outline: none;
+    border-color: #4a89f3;
+    box-shadow: 0 0 0 2px rgba(74, 137, 243, 0.25);
+  }
+  
+  .modal-form textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .date-time-input-wrapper {
+    position: relative;
+  }
+  
+  .date-time-input-wrapper input[type="datetime-local"] {
+    color: #666;
+  }
+  
+  .date-time-input-wrapper .calendar-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .modal-button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .cancel-btn {
+    background-color: #e9ecef;
+    color: #495057;
+    border: 1px solid #ced4da;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #dee2e6;
+  }
+  
+  .create-btn {
+    background-color: #4a89f3;
+    color: white;
+  }
+  
+  .create-btn:hover {
+    background-color: #3b78d8;
+    box-shadow: 0 2px 8px rgba(74, 137, 243, 0.4);
+  }
+  */
+
+  /* src/components/CreateClassModal/CreateClassModal.css */
+
+/* This is the dark, semi-transparent background. It also centers the modal. */
+.modal-overlay {
+    /* Position it to cover the entire screen */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  
+    /* This is the key centering logic */
+    display: flex;
+    align-items: center;      /* Vertically centers the content */
+    justify-content: center;  /* Horizontally centers the content */
+    
+    /* Make sure it's on top of everything */
+    z-index: 1000;
+    
+    /* Visual styling */
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  /* This is the main white "box" of the modal. */
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  /* The "Create New Class" title */
+  .modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* The <form> element that holds all the inputs */
+  .modal-form {
+    display: flex;
+    flex-direction: column; /* Stacks the form elements vertically */
+    gap: 1.25rem;          /* Creates space between each input field */
+  }
+  
+  /* General styling for all text inputs and the textarea */
+  .modal-form input,
+  .modal-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Style for when a user clicks into a field */
+  .modal-form input:focus,
+  .modal-form textarea:focus {
+    outline: none;
+    border-color: #4a89f3;
+    box-shadow: 0 0 0 2px rgba(74, 137, 243, 0.25);
+  }
+  
+  .modal-form textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  /* Wrapper for the date/time input to position the icon */
+  .date-time-input-wrapper {
+    position: relative;
+  }
+  
+  .date-time-input-wrapper input[type="datetime-local"] {
+    color: #666;
+  }
+  
+  .date-time-input-wrapper .calendar-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    pointer-events: none;
+  }
+  
+  /* The container for the "Cancel" and "Create Class" buttons */
+  .button-container {
+    display: flex;
+    justify-content: flex-end; /* This pushes the buttons to the right */
+    gap: 1rem;                  /* Space between the buttons */
+    margin-top: 1.5rem;
+  }
+  
+  /* General style for both buttons */
+  .modal-button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+  }
+  
+  /* The gray "Cancel" button */
+  .cancel-btn {
+    background-color: #e9ecef;
+    color: #495057;
+    border: 1px solid #ced4da;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #dee2e6;
+  }
+  
+  /* The blue "Create Class" button */
+  .create-btn {
+    background-color: #4a89f3;
+    color: white;
+  }
+  
+  .create-btn:hover {
+    background-color: #3b78d8;
+    box-shadow: 0 2px 8px rgba(74, 137, 243, 0.4);
+  }

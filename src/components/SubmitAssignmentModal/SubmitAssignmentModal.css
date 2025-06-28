@@ -1,0 +1,19 @@
+/* This can be very similar to other modal CSS */
+.modal-overlay {
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(32, 33, 36, 0.6);
+    display: flex; align-items: center; justify-content: center; z-index: 1000;
+  }
+  .modal-content {
+    background: white; padding: 2rem 2.5rem; border-radius: 12px;
+    width: 100%; max-width: 500px;
+  }
+  .modal-content h2 { text-align: center; margin-top: 0; margin-bottom: 2rem; }
+  .modal-form { display: flex; flex-direction: column; gap: 1.25rem; }
+  .modal-form input, .modal-form textarea {
+    width: 100%; padding: 14px 16px; border: 1px solid #dadce0; border-radius: 8px;
+  }
+  .button-container { display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1.5rem; }
+  .modal-button { padding: 12px 24px; border-radius: 8px; border: none; cursor: pointer; }
+  .cancel-btn { background-color: #fff; color: #5f6368; border: 1px solid #dadce0; }
+  .create-btn { background-color: #4285f4; color: white; }

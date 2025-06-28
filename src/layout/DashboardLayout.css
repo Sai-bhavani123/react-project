@@ -1,0 +1,12 @@
+/* src/layouts/DashboardLayout.css */
+.dashboard-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.dashboard-main {
+    flex-grow: 1;
+    background-color: #f8f9fa; /* The light gray background for content */
+    padding: 2rem 3rem;
+}
